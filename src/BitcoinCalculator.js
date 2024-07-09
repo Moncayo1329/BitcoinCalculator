@@ -15,8 +15,8 @@ const BitcoinCalculator = () => {
   };
 
   return (
-    <div>
-      <h1>Calculadora de Ganancia en Bitcoin</h1>
+    <div className='container'>
+      <h1>Calculadora en Bitcoin</h1>
       <div>
         <label>
           Inversión Inicial (USD):
