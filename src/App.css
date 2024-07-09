@@ -20,5 +20,26 @@ height: 100vh;
   padding: 20px;
   width: 300px;
   text-align: center;
+ height: 300px;
 
+}
+
+
+
+.btn-outline-secondary{
+
+  background-color:rgb(202, 157, 10); /* Success color */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+} 
+
+
+.btn-outline-secondary:hover {
+
+  background-color: rgb(139, 109, 9); /* Darker shade of success color */
 }

@@ -16,7 +16,7 @@ const BitcoinCalculator = () => {
 
   return (
     <div className='container'>
-      <h1>Calculadora en Bitcoin</h1>
+      <h3>Calculadora en Bitcoin</h3>
       <div>
         <label>
           Inversión Inicial (USD):
@@ -47,7 +47,8 @@ const BitcoinCalculator = () => {
           />
         </label>
       </div>
-      <button onClick={handleCalculate}>Calcular Ganancia</button>
+      <button type="button" className='btn-outline-secondary' onClick={handleCalculate}>Calcular Ganancia</button>
+   
       {profit !== null && (
         <div>
           <h2>Ganancia: ${profit.toFixed(2)}</h2>
