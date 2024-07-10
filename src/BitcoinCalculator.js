@@ -29,11 +29,12 @@ const BitcoinCalculator = () => {
 
   return (
     <div className='container'>
-      <h3>Calculadora en Bitcoin</h3>
+      <h3>Calculate your Bitcoin investment</h3>
       <div>
         <label>
-          Inversión Inicial (USD):
-          <input
+         <h4>Initial Investment (USD):</h4> 
+          <input 
+          className='input'
             type="number"
             value={initialInvestment}
             onChange={(e) => setInitialInvestment(e.target.value)}
@@ -42,8 +43,9 @@ const BitcoinCalculator = () => {
       </div>
       <div>
         <label>
-          Precio Actual de Bitcoin (USD):
+          <h4>Current Price of Bitcoin (USD):</h4>
           <input
+          className='input'
             type="number"
             value={currentPrice}
             onChange={(e) => setCurrentPrice(e.target.value)}
@@ -52,22 +54,24 @@ const BitcoinCalculator = () => {
       </div>
       <div>
         <label>
-          Cantidad de Bitcoin Comprado:
+        <h4>Amount of Bitcoin Purchased:</h4>
           <input
+          className='input'
             type="number"
             value={btcAmount}
             onChange={(e) => setBtcAmount(e.target.value)}
           />
         </label>
       </div>
-      <button type="button" className='btn-outline-secondary' onClick={handleCalculate}>Calcular Ganancia</button>
-      <button type="button" className='btn-outline-secondary' onClick={handleReset}>Reiniciar</button>
    
       {profit !== null && (
         <div>
-          <h2>Ganancia: ${formatNumber(profit)}</h2>
-        </div>
+          <h4>Profit: ${formatNumber(profit)}</h4>
+        </div> 
       )}
+
+<button type="button" className='btn-outline-secondary' onClick={handleCalculate}>Calculate Profit</button>
+<button type="button" className='btn-outline-secondary' onClick={handleReset}>Reset</button>
     </div>
   );
 };
